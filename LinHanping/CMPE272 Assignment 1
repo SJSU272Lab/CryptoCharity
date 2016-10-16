@@ -1,0 +1,9 @@
+17. Use baby names datasets to come up on some cool analytic spark queries: https://www.ssa.gov/oact/babynames/limits.html (Links to an external site.) (Hint: user finds out how boy or girl names are trending since 2005) 
+
+https://console.ng.bluemix.net/data/notebooks/912956e3-a211-443e-a572-03cadff962b0/view?access_token=80cefd39af72e9061d35c687999a4eb1b64f841a238a61c5da8e8395f2dc11f7
+
+
+
+24. Use medicare outpatient payment datasets https://data.cms.gov/Medicare/Outpatient-Prospective-Payment-System-OPPS-Provide/ks44-5ax3 (Links to an external site.) and use spark to find out interesting answers such as: which city had max payments claimed. Which provider had repeated claims etc.. 
+
+https://cdsx.ng.bluemix.net/data/notebooks/0b6a1e4d-d0ce-4661-a10f-2b6c33394157/view?access_token=35d6a915a122f5298bc04088103f0deaf931ed92cea8ae61e5ce66b535e8cff7
