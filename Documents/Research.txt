@@ -11,3 +11,6 @@ Research Work :
     Solidicty is used as one of the ways to implement smart Contracts in Ethereum.
     Meteor is a javascript frameworkd used to create user interface to interact with Ethereum.
     Truffle is another which is used to linking , deploying , creating smart contracts.
+    Geth client with Go language.
+    Embark framework.
+    web3 as a middleware for interacting with Ether
