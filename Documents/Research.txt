@@ -1,0 +1,13 @@
+Research Work :
+
+1> About Blockchain :
+    Blockchain is the technology for creating decentralised applications. 
+2> About Ethereum :
+    Ethereum is the platform for Blockchain. Ether is the Digital currency used for Ethereum.
+3> Smart - Contracts:
+    Smart Contracts are operations that are to be executed on Ethereum to perform some transactions. 
+    Smart contracts have the logic written for executing operations.
+4> Current Development Options available:
+    Solidicty is used as one of the ways to implement smart Contracts in Ethereum.
+    Meteor is a javascript frameworkd used to create user interface to interact with Ethereum.
+    Truffle is another which is used to linking , deploying , creating smart contracts.
