@@ -1,6 +1,6 @@
 # Fall16-Team24
 
-#Project Topic : CCC (Crysto-Crypto-Charity) based on Ethereum
+#Project Topic : CCC (Crysto-Crypto-Charity) based on BlockChain
 
 #Team members :
 Wenjin Ma,
