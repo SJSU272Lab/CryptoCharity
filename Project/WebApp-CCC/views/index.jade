@@ -1,0 +1,35 @@
+extends ./templates/layout.jade
+	
+	
+// --------------- Header -------------- //
+block custom_header
+	//script(src='/js/part1.js?v=#{bag.jshash}')
+	script(type='text/javascript').
+		$(document).ready(function(){
+			
+		});
+
+
+// --------------- Navigation Bar  -------------- //
+block navpanel
+	include ./templates/nav_ccc.jade
+	
+	
+// --------------- Main Stuff  -------------- //
+block content
+	#contentPanel
+		
+		#blockdate(title="date of last block") loading...
+				
+		// --------------- donor Panel
+		include ./panel_donor.jade
+
+		// --------------- charity Panel
+		include ./panel_charity.jade
+		
+		
+		// --------------- acceptor Panel
+		include ./panel_acceptor.jade
+		
+block footer
+	include ./templates/blockchain.jade
