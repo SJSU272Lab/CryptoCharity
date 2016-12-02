@@ -60,7 +60,7 @@ body {
   text-align: left;
   height: 100%;
   color: #555;
-  background: #343D48; }
+  background:#17202A; /*#343D48; */}
 
 h1 {
   font-size: 44px;
@@ -225,7 +225,7 @@ label {
   height: 60px;
   line-height: 60px;
   width: 100%;
-  background: #222832;
+  background:#154360;/* #222832;*/
   font-size: 15px; }
 
 #mainPanel {
@@ -263,12 +263,12 @@ label {
   z-index: 2; }
 
 #logo {
-  color: #7E90A0;
+  color:#F8F9F9; /* #7E90A0;*/
   display: inline-block;
   margin-left: 20px;
   font-size: 18px;
   font-weight: 600;
-  background: #222832;
+  background:  #154360; /*#222832;*/
   position: relative;
   z-index: 4; }
 
@@ -357,7 +357,7 @@ label {
 #viewBCWrap {
   color: #fff;
   padding: 22px;
-  background: #222832;
+  background: #1A5276;/*#222832;*/
   font-size: 12px;
   cursor: pointer;
   width: 180px;
@@ -366,10 +366,10 @@ label {
 
 #footerWrap {
   height: 235px;
-  background: #181C22;
+  background: #154360;/*  #181C22; 5D6D7*/
   color: #646B73;
   width: 100%;
-  border-top: 25px #222832 solid; }
+  border-top: 15px #34495E solid; }
 
 #notificationPanel {
   display: none;
