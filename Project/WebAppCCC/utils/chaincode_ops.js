@@ -40,19 +40,20 @@ function CPChaincode(chain, chaincodeID) {
 module.exports.CPChaincode = CPChaincode;
 
 /**
- * Create an account on the commercial paper trading network.  The given enrollID will also be taken as the name for the
- * commercial paper trading account.
+ * Create an account on the ccc network.  The given enrollID will also be taken as the name for the
+ * ccc account.
  * @param enrollID The enrollID for the user submitting the transaction.
  * @param cb A callback function of the form: function(error)
  */
-CPChaincode.prototype.createCompany = function (enrollID, cb) {
+CPChaincode.prototype.createCompany = function (enrollID, roleText, cb) {
     console.log(TAG, 'Creating a company for:', enrollID);
+    console.log(TAG, 'Creating a company role as:', roleText);
 
     // Accounts will be named after the enrolled users
     var createRequest = {
-        chaincodeID: this.chaincodeID,
+        chaincodeID: this.chaincodeID,       
         fcn: 'createAccount',
-        args: [enrollID]
+        args: [enrollID, roleText]
     };
 
     invoke(this.chain, enrollID, createRequest, function(err, result) {

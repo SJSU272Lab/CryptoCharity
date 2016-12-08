@@ -141,18 +141,28 @@ func (t *SimpleChaincode) createAccounts(stub shim.ChaincodeStubInterface, args 
 func (t *SimpleChaincode) createAccount(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	fmt.Println("Creating account")
 
-	// Obtain the username to associate with the account
-	if len(args) != 1 {
+	// Obtain the username and role to associate with the account
+	if len(args) != 2 {
 		fmt.Println("Error obtaining username")
 		return nil, errors.New("createAccount accepts a single username argument")
 	}
 	username := args[0]
-
+	
+	userrole  := args[1]
 	// Build an account object for the user
 	var assetIds []string
+	var balance float64
+
 	suffix := "000A"
 	prefix := username + suffix
-	var account = Account{ID: username, Prefix: prefix, CashBalance: 10000000.0, AssetsIds: assetIds}
+	if strings.EqualFold(userrole ,"acceptor") {
+		balance = 0.0
+	}else{
+		balance = 10000000.0
+	}
+
+
+	var account = Account{ID: username, Prefix: prefix, CashBalance: balance, AssetsIds: assetIds}
 	accountBytes, err := json.Marshal(&account)
 	if err != nil {
 		fmt.Println("error creating account" + account.ID)
@@ -569,7 +579,7 @@ func (t *SimpleChaincode) transferPaper(stub shim.ChaincodeStubInterface, args [
 	}
 
 	amountToBeTransferred := float64(tr.Quantity) * cp.Par
-	amountToBeTransferred -= (amountToBeTransferred) * (cp.Discount / 100.0) * (float64(cp.Maturity) / 360.0)
+	//amountToBeTransferred -= (amountToBeTransferred) * (cp.Discount / 100.0) * (float64(cp.Maturity) / 360.0)
 
 	// If toCompany doesn't have enough cash to buy the papers
 	if toCompany.CashBalance < amountToBeTransferred {

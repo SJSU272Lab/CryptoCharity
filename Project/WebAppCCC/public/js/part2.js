@@ -279,13 +279,8 @@ function connect_to_server() {
 			else if (data.msg === 'company') {
 				try{
 					var company = JSON.parse(data.company);
-                    if(user.role.toLowerCase() === "acceptor"){
-                        $("#accountBalance").html('$ 0');
-                    }
-                    else{
-                        $("#accountBalance").html(formatMoney(company.cashBalance));
-                    }
-					    
+                    $("#accountBalance").html(formatMoney(company.cashBalance));
+                        
 				}
 				catch(e){
 					console.log('cannot parse company', e);

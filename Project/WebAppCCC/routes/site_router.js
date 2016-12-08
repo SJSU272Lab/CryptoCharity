@@ -130,19 +130,19 @@ function login(req, res) {
             console.log(TAG, 'User enrollment successful:', req.body.username);
 
             // Go ahead and create an 'account' for this ID in the chaincode
-            chaincode_ops.createCompany(req.body.username, function(err) {
+            chaincode_ops.createCompany(req.body.username, req.body.roleText, function(err) {
                 if(err) {
                     console.error(TAG, 'failed to initialize user account:', err.message);
                     // TODO set an error and return to the login screen
                     return res.redirect('/login');
                 }
 
-                // Determine the user's role and login by adding the user info to the session.
+                /*Determine the user's role and login by adding the user info to the session.
                 if (req.body.username.toLowerCase().indexOf('monitor') > -1) {
                     req.session.role = 'charitymonitor';
                 } else {
-                    req.session.role = 'user';
-                }
+                    req.session.role = 'acceptor';
+                }*/
                 req.session.username = req.body.username;
                 req.session.name = req.body.username;
                 req.session.role = req.body.roleText;
