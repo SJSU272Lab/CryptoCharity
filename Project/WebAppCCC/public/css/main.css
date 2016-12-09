@@ -42,7 +42,7 @@ html {
 
 #logo,
 #navPanel {
-    background: #FBD027; /* #154360 #222832;*/
+    background: #154360; /*FBD027 #154360 #222832;*/
 }
 
 a,
@@ -168,8 +168,9 @@ body {
     font-size: 16px;
     text-align: left;
     height: 100%;
-    color: #555;
-    background: #3C04A1 ; /*17202A #343D48; */
+    color: #555;    
+    
+    /*background: #3C04A1 ; 17202A #343D48; */
 }
 
 ol,
@@ -307,7 +308,7 @@ hr {
 }
 
 hr:first-of-type {
-    height: 2px
+    height: 5px
 }
 
 pre {
@@ -358,6 +359,7 @@ img {
     max-width: 100%
 }
 
+
 a,
 a:visited {
     color: #2e6da4;
@@ -394,10 +396,20 @@ a:visited {
     line-height: 60px;
     font-size: 15px
 }
+#imgBackgroundContainer{
+    background-image: url(/imgs/poorbackground.jpg);
+    filter: opacity(0.5) grayscale(20%) ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: opacity(0.5) grayscale(20%);
+    -o-filter: opacity(0.5)  grayscale(20%);    
+    background-size: cover;
 
+}
 #mainPanel {
-    color: #fff;
-    min-height: 750px
+    color: #166461;  /*#fff;*/
+    min-height: 750px   
 }
 
 #contentPanel {
@@ -512,6 +524,12 @@ th.header {
     height: 270px
 }
 
+.imgAcceptorContainer{
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px
+}
+
 #createform {
     float: left;
     margin-left: 40px;
@@ -537,12 +555,12 @@ th.header {
 
 .hint {
    font-size: 18px;
-    color: #44C938
+    color: #166461
 }
 
 .info {
     font-size: 18px;
-    color: #FBD027
+    color: #166461; /* FBD027 */
 }
 
 #errorNotificationPanel,
@@ -563,7 +581,7 @@ th.header {
 #viewBCWrap {
     color: #fff;
     padding: 22px;
-    background: #FBD027 ;/* 1A5276 #222832;*/
+    background: #1A5276 ;/*FBD027 1A5276 #222832;*/
     font-size: 12px;
     cursor: pointer;
     width: 180px;
@@ -573,9 +591,9 @@ th.header {
 
 #footerWrap {
     height: 235px;
-    background: #FBD027 ;/* 154360 #181C22; */
+    background: #154360 ;/*FBD027 154360 #181C22; */
     color: #646B73;
-    width: 100%; /* 25px 222832 solid */
+    width: 100%; /* 25px 34495E 222832 solid */
     border-top: 15px #34495E solid  
 }
 
@@ -731,6 +749,12 @@ th.header {
     z-index: 4
 }
 
+/*.tradesBody{
+    color: aqua;
+    background: none;
+    background-color: cadetblue;
+}*/
+
 #addMarbleButton,
 #loginWrap,
 #tradeForm,
@@ -762,7 +786,7 @@ th.header {
     display: none;
     margin: 10px auto auto;
     width: 150px;
-    background: #CACFD2; /* 222832; */
+    background: #154360; /*CACFD2 222832; */
     z-index: 9;
     right: 7px;
     top: 55px
