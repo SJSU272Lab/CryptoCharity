@@ -26,20 +26,20 @@ var TAG = 'router:';
 // Home
 // ============================================================================================================================
 router.get('/', isAuthenticated, function (req, res) {
-    res.render('part2', {title: 'Commercial Paper Demo', bag: {setup: setup, e: process.error, session: req.session}});
+    res.render('part2', {title: 'CCC Demo', bag: {setup: setup, e: process.error, session: req.session}});
 });
 
 router.get('/home', isAuthenticated, function (req, res) {
-    res.redirect('/trade');
+    res.redirect('/ledger');
 });
 router.get('/create', isAuthenticated, function (req, res) {
-    res.render('part2', {title: 'Commercial Paper Demo', bag: {setup: setup, e: process.error, session: req.session}});
+    res.render('part2', {title: 'CCC Demo', bag: {setup: setup, e: process.error, session: req.session}});
 });
-router.get('/trade', isAuthenticated, function (req, res) {
-    res.render('part2', {title: 'Commercial Paper Demo', bag: {setup: setup, e: process.error, session: req.session}});
+router.get('/ledger', isAuthenticated, function (req, res) {
+    res.render('part2', {title: 'CCC Demo', bag: {setup: setup, e: process.error, session: req.session}});
 });
 router.get('/audit', isAuthenticated, function (req, res) {
-    res.render('part2', {title: 'Commercial Paper Demo', bag: {setup: setup, e: process.error, session: req.session}});
+    res.render('part2', {title: 'CCC Demo', bag: {setup: setup, e: process.error, session: req.session}});
 });
 
 router.get('/login', function (req, res) {
@@ -152,7 +152,7 @@ function login(req, res) {
                 if (req.session.role.toLowerCase() === 'charitymonitor'.toLowerCase()) {
                     res.redirect('/audit');
                 } else {
-                    res.redirect('/trade');
+                    res.redirect('/ledger');
                 }
             });
         }

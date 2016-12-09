@@ -15,7 +15,7 @@ var user = {
 };
 var panels = [
     {
-        name: "trade",
+        name: "ledger",
         formID: "tradeFilter",
         tableID: "#tradesBody",
         filterPrefix: "trade_"
@@ -46,10 +46,10 @@ $(document).on('ready', function () {
         if (user.role && user.role.toUpperCase() === "charitymonitor".toUpperCase()) {
             $("#auditLink").show();
         }else if (user.role && user.role.toUpperCase() === "donor".toUpperCase()){
-            $("#tradeLink").show();
+            $("#ledgerLink").show();
         } else if (user.username) {
             $("#createLink").show();
-            $("#tradeLink").show();
+            $("#ledgerLink").show();
         }
     } else {
 
@@ -85,7 +85,7 @@ $(document).on('ready', function () {
                 //disable this button
                 $(this).prop("disabled",true);
                 $(".panel").hide();
-                $("#tradePanel").show();
+                $("#ledgerPanel").show();
             }
         }
         return false;
@@ -101,7 +101,7 @@ $(document).on('ready', function () {
         $("input[name='name']").val('r' + randStr(6));
     });
 
-    $("#tradeLink").click(function () {
+    $("#ledgerLink").click(function () {
         ws.send(JSON.stringify({type: "get_open_trades", v: 2, user: user.username}));
     });
 
@@ -390,7 +390,7 @@ function build_trades(papers, panelDesc) {
                     style && row.classList.add(style);
 
                     // Only the trade panel should allow you to interact with trades
-                    if (panelDesc.name === "trade") {
+                    if (panelDesc.name === "ledger") {
                         var disabled = false
                         if (user.name.toLowerCase() === entries[i].owner.toLowerCase()) disabled = true;			//cannot buy my own stuff
                         if (entries[i].issuer.toLowerCase() !== entries[i].owner.toLowerCase()) disabled = true;
@@ -406,7 +406,7 @@ function build_trades(papers, panelDesc) {
         // Placeholder for an empty table
         var html = '';
         if (rows.length == 0) {
-            if (panelDesc.name === 'trade')
+            if (panelDesc.name === 'ledger')
                 html = '<tr><td>nothing here...</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
             else if (panelDesc.name === 'audit')
                 html = '<tr><td>nothing here...</td><td></td><td></td><td></td><td></td><td></td></tr>'; // No action column
@@ -427,7 +427,7 @@ function build_trades(papers, panelDesc) {
             }
         }
     } else {
-        if (panelDesc.name === 'trade')
+        if (panelDesc.name === 'ledger')
             html = '<tr><td>nothing here...</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
         else if (panelDesc.name === 'audit')
             html = '<tr><td>nothing here...</td><td></td><td></td><td></td><td></td><td></td></tr>'; // No action column

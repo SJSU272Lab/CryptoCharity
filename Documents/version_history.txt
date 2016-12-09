@@ -6,4 +6,4 @@ version 3: added money transfer - addition and dedcution of money from donor and
             modified chaincode for having 0 balance for acceptor account
 
 
-version 4:  chanigng UI - TRADE to LEDGER
+version 4:  chanigng UI - TRADE to LEDGER , increate hint font size and change color
