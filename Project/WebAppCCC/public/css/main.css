@@ -169,7 +169,7 @@ body {
     text-align: left;
     height: 100%;
     color: #555;    
-    
+    background: #17202A
     /*background: #3C04A1 ; 17202A #343D48; */
 }
 
@@ -396,19 +396,39 @@ a:visited {
     line-height: 60px;
     font-size: 15px
 }
+
+#contactUS{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: #fff
+}
+.content-section {
+  padding-top: 100px;
+}
+
+#ourMission{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #imgBackgroundContainer{
     background-image: url(/imgs/poorbackground.jpg);
-    filter: opacity(0.5) grayscale(20%) ;
+    filter:  grayscale(30%) ; /*opacity(0.5)*/
     position: absolute;
     height: 100%;
     width: 100%;
-    -webkit-filter: opacity(0.5) grayscale(20%);
-    -o-filter: opacity(0.5)  grayscale(20%);    
+    -webkit-filter:  grayscale(20%);
+    -o-filter:   grayscale(20%);    
     background-size: cover;
 
 }
 #mainPanel {
-    color: #166461;  /*#fff;*/
+    color: #fff;  /*#166461;*/
     min-height: 750px   
 }
 
@@ -424,6 +444,23 @@ a:visited {
     width: 100%
 }
 
+.missionimgdiv{
+    
+    margin: 10px 10px 0 0;
+}
+
+.missiondiv1 {
+    
+    /*background-image: url(/imgs/mission.jpg);   */
+    border: 3px solid #73AD21;
+    overflow: auto;
+    
+}
+
+.missiondiv2 {
+    border: 2px solid #166461;
+    overflow: auto;
+}
 .nav {
     color: #7E90A0;
     padding: 0 30px
@@ -901,7 +938,7 @@ th.header {
 .inactiveButton,
 .invalid,
 button:disabled {
-    opacity: .3
+    opacity: .2
 }
 
 .modalDialog>div {

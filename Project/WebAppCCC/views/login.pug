@@ -18,9 +18,25 @@ block navpanel
 	
 //- --------------- Main Stuff  -------------- //
 block content
+	div#imgBackgroundContainer
 	#contentPanel
+		#ourMission.content-section
+			h1 Our Mission
+			div.missiondiv1
+				//div.missionimgdiv
+				img(src="/imgs/mission.jpg", class="movie-poster", style="float:left; padding-right: 10px")
+				//div.missiondiv2
+				p Make a difference by making someone smile today!
+				p We provide helping hand to those who need it!
+				p Our charity application provides financial and humanitarian assistance.
+				p Idea is designed to help every person in the world and to push society forward.
+				p Donate with having transparency in transaction.				
+				p Application leverages the Blockchain Technology to help build trusless distributed application.
+			br
+			br
+
 		#loginContainer
-			h1 Enroll
+			h2 Enroll
 			img(src="/imgs/login.png", class="movie-poster")
 			hr
 
@@ -48,7 +64,7 @@ block content
 				button(type="submit")#loginButton Enroll/Login
 		
 		#registerContainer
-			h1 Register
+			h2 Register
 			img(src="/imgs/register.png", class="movie-poster")
 			hr
 
@@ -65,6 +81,23 @@ block content
 				
 
 				button(type="submit")#registerButton Register
+
+		
+		br
+		br
+		#contactUS(class ="content-section")
+			h2 Contact US
+			p Feel free to email us to provide some feedback , give us suggestions , or to just say hello!
+			p
+				a(href="mailto:feedback@team24.com") feedback@team24.com
+			br
+			br
+			p
+				Copyright &copy; Your Website 2016
+
+
+	
+		
 				
 
 
